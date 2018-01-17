@@ -15,7 +15,7 @@ class Chef
       def package_deps
         case node['platform_family']
         when 'rhel', 'fedora', 'amazon'
-          %w(gcc bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel make)
+          %w(gcc bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel make sqlite-devel gcc-c++)
         when 'debian'
           %w(gcc autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev make)
         when 'suse'
